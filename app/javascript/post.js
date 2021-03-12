@@ -1,16 +1,14 @@
 function post (){
-  // クリックしたことを認識するために.getElementById("submit_btn")を用いて取得
-  const submit = document.getElementById("submit_btn");
-  // クリックによるイベントはclickを用いる
-  submit.addEventListener("click", (e) => {
-    // コンソール上（ログ）に表示させる。
-    // index.html.erbでformにはnew_articleというのidが付与されているため、getElementByIdを用いて取得します。
-    console.log(document.getElementById("new_article"));
-    // ブラウザ上に用意されている送信ボタンが反応してしまい
-    // 処理が重複してしまうのでe.preventDefault();でデフォルト送信をキャンセルする。
-    e.preventDefault();
-  });
-}
+  // 文字入力フォームのidはarticle_textであるため
+  // getElementByIdを用いて取得
+  const article_text = document.getElementById("article_text")
+  // キーボード操作があった場合にイベント発火。
+  // そのときに用いるイベントハンドラーがkeyup
+  article_text.addEventListener("keyup", () => {
+    // 取得した要素に含まれる値をvalueを用いてconsole.logへ出力させる
+    console.log(article_text.value);
+    });
+  }
 
 // ページが読まれたら実行
 window.addEventListener("load",post);
