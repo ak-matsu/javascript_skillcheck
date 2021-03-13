@@ -6,13 +6,10 @@ function post (){
     // コンソール上（ログ）に表示させる。
     // index.html.erbでformにはnew_articleというのidが付与されているため、getElementByIdを用いて取得します。
     console.log(document.getElementById("new_article"));
-    
-    value = "非同期投稿を実装"
-    console.log(value)
-
 
     // ブラウザ上に用意されている送信ボタンが反応してしまい
     // 処理が重複してしまうのでe.preventDefault();でデフォルト送信をキャンセルする。
     e.preventDefault();
   });
 }
+window.addEventListener("load",post);
