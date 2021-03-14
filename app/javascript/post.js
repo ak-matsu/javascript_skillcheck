@@ -19,6 +19,9 @@ function post (){
     // Ajaxで送信
     XHR.send(formData);
 
+    XHR.onload = () => {
+      console.log(XHR.response.article);
+    };
 
     // ブラウザ上に用意されている送信ボタンが反応してしまい
     // 処理が重複してしまうのでe.preventDefault();でデフォルト送信をキャンセルする。
