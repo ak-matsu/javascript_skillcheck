@@ -8,7 +8,8 @@ function count (){
 
     // 実際に打ち込んだ値を（articleText）valueで用いて取得し
     // コンソールログで表示させる。
-    console.log(articleText.value);
+    // lengthを用いるとその文字数をカウントした結果が、戻り値として得られる。
+    console.log(articleText.value.length);
   });
 }
 
