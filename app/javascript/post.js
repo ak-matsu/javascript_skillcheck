@@ -20,6 +20,15 @@ function post (){
     XHR.send(formData);
 
     XHR.onload = () => {
+      // エラーがアラートとして表示されるよう条件分岐させる
+      // もしもXHR.statusが200（成功）ではないとき
+      if (XHR.status != 200){
+        // アラートとしてエラーのステータスコードとステータステキストを表示
+        alert(`Error ${XHR.status}: ${XHR.statusText}`);
+        // returnで抜ける。
+        return null;
+      }
+
       console.log(XHR.response.article);
     
     // レスポンスのうち、コントローラー側で指定したjson形式のデータを変数に代入しています。
