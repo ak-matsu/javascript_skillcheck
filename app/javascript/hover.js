@@ -14,7 +14,7 @@ function hover(){
     });    
     
     article.addEventListener('mouseout',()=> {
-      article.removeAttribute("style","background-color:#F1940B;")
+      article.removeAttribute("style")
       console.log("マウスアウト");
     });    
 
