@@ -9,10 +9,12 @@ function hover(){
     // マウスオーバーしたときのイベントハンドラーはmouseover
     // 単体のためarticle
     article.addEventListener('mouseover',()=> {
+      article.setAttribute("style","background-color:#F1940B;")
       console.log("マウスオーバー");
     });    
-
+    
     article.addEventListener('mouseout',()=> {
+      article.removeAttribute("style","background-color:#F1940B;")
       console.log("マウスアウト");
     });    
 
