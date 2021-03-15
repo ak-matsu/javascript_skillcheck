@@ -11,6 +11,11 @@ function hover(){
     article.addEventListener('mouseover',()=> {
       console.log("マウスオーバー");
     });    
+
+    article.addEventListener('mouseout',()=> {
+      console.log("マウスアウト");
+    });    
+
   });
 }
 window.addEventListener("load",hover);
