@@ -20,4 +20,8 @@ function hover(){
 
   });
 }
-window.addEventListener("load",hover);
+// ページが読まれたら
+// window.addEventListener("load",hover);
+
+// 1秒に1回、関数hoverが読み込まれるように設定
+setInterval(hover, 1000);
